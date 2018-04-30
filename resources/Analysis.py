@@ -1,7 +1,6 @@
 from textblob import TextBlob
 from bs4 import BeautifulSoup
 import requests
-import re
 
 class Analysis:
 	def __init__(self, term):
@@ -20,11 +19,5 @@ class Analysis:
 		
 		for text in headline_results:
 			blob = TextBlob(text.get_text())	
-			self.sentiment += blob.sentiment.polarity
-			self.subjectivity += blob.sentiment.subjectivity
-			print(blob + '\n' + str(blob.sentiment) + '\n' + '\n')
-	
-
-
-a = Analysis('ethereum price')
-a.run()
+			self.sentiment += blob.sentiment.polarity / len(headline_results)
+			self.subjectivity += blob.sentiment.subjectivity / len(headline_results)
