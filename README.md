@@ -1,2 +1,2 @@
 # googleSentiment
-Scrapes google headlines and analyzes sentiment for cryptocurrencies.
+Scrapes google search result headlines and analyzes sentiment.
