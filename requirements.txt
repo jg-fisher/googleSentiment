@@ -6,7 +6,7 @@ click==6.7
 Flask==1.0.1
 idna==2.6
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 nltk==3.2.5
 requests==2.18.4
